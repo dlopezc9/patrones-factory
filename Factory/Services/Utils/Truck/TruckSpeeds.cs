@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Utils.Truck
+﻿namespace Factory.Services.Utils.Truck
 {
     /// <summary>
     /// Const file containing speed for different trucks.

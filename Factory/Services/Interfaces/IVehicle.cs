@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Interfaces
+﻿namespace Factory.Services.Interfaces
 {
     public interface IVehicle
     {
@@ -8,6 +8,6 @@
         /// <param name="hours">Amount of hours traveled.</param>
         /// <param name="type">Type of truck traveled.</param>
         /// <returns>Calculation of distance traveled.</returns>
-        public abstract int DistanceTraveled();
+        public int DistanceTraveled();
     }
 }

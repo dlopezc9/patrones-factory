@@ -1,8 +1,8 @@
-﻿using Factory.Logic.Entities;
+﻿using Factory.Services.Entities;
 
-namespace Factory.Logic.Interfaces
+namespace Factory.Services.Interfaces
 {
-    public interface IFactory
+    public interface IFactoryPattern
     {
         /// <summary>
         /// Creates a new vehicle.
@@ -10,6 +10,6 @@ namespace Factory.Logic.Interfaces
         /// <param name="type">Type of vehicle to be created.</param>
         /// <param name="brand">Brand of the vehicle.</param>
         /// <param name="name">Name for the vehicle.</param>
-        public void CreateNewVehicle(VehicleProperties vehicleProperties, int hangarId);
+        public void CreateNewVehicle(VehicleProperties vehicleProperties);
     }
 }

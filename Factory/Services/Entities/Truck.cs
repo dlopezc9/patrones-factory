@@ -1,8 +1,8 @@
 ﻿using System.Runtime.CompilerServices;
 
-using Factory.Logic.Utils.Truck;
+using Factory.Services.Utils.Truck;
 
-namespace Factory.Logic.Entities
+namespace Factory.Services.Entities
 {
     /// <summary>
     /// Vehicle type Vehicle.
@@ -20,14 +20,14 @@ namespace Factory.Logic.Entities
         public override string Brand { get; set; }
 
         /// <summary>
+        /// Traveled hours of the vehicle.
+        /// </summary>
+        public override int Hours { get; set; }
+
+        /// <summary>
         /// Amount of wheels of the truck.
         /// </summary>
         public int Wheels { get; set; }
-
-        /// <summary>
-        /// Traveled hours of the vehicle.
-        /// </summary>
-        public int Hours { get; set; }
 
         /// <summary>
         /// Constructor for airplane.

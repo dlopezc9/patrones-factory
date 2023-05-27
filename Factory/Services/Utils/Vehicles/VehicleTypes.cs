@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Utils.Vehicles
+﻿namespace Factory.Services.Utils.Vehicles
 {
     /// <summary>
     /// Class with the const for VehicleTypes.

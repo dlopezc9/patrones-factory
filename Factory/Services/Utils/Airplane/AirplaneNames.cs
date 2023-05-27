@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Utils.Airplane
+﻿namespace Factory.Services.Utils.Airplane
 {
     /// <summary>
     /// Const with the names from the brand names.

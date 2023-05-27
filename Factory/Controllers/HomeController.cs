@@ -1,6 +1,6 @@
-﻿using Factory.Logic;
-using Factory.Logic.Entities;
-using Factory.Logic.Interfaces;
+﻿using Factory.Services;
+using Factory.Services.Entities;
+using Factory.Services.Interfaces;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,32 +10,26 @@ namespace Factory.Controllers
     [Route("[home]")]
     public class HomeController : Controller
     {
-        private readonly IFactory factory;
+        private readonly IFactoryPattern factory;
 
         private readonly IHangar hangar;
 
-        public HomeController(IFactory factory, IHangar hangar) 
+        public HomeController(IFactoryPattern factory, IHangar hangar) 
         { 
             this.factory = factory;
             this.hangar = hangar;
         }
 
-        [HttpPost(Name = "AddHangar")]
-        public void AddNewHangar(int id) 
-        {
-            hangar.CreateHangar(id);
-        }
-
         [HttpPost(Name = "AddVehicle")]
-        public void AddNewVehicle(VehicleProperties vehicle, int hangarId)
+        public void AddNewVehicle(VehicleProperties vehicle)
         {
-            factory.CreateNewVehicle(vehicle, hangarId);
+            factory.CreateNewVehicle(vehicle);
         }
 
         [HttpGet(Name = "GetHangarVehicles")]
-        public void GetHangarVehicles(int id)
+        public void GetHangarVehicles(VehicleProperties vehicle)
         {
-            return;
+            hangar.GetVehicle(vehicle);
         }
     }
 }

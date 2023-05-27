@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Utils.Truck
+﻿namespace Factory.Services.Utils.Truck
 {
     /// <summary>
     /// Const file with the names from the brand names.

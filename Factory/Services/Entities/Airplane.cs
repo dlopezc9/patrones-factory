@@ -1,7 +1,7 @@
-﻿using Factory.Logic.Utils;
-using Factory.Logic.Utils.Airplane;
+﻿using Factory.Services.Utils;
+using Factory.Services.Utils.Airplane;
 
-namespace Factory.Logic.Entities
+namespace Factory.Services.Entities
 {
     /// <summary>
     /// Vehicle type Vehicle.

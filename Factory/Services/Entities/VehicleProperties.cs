@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Entities
+﻿namespace Factory.Services.Entities
 {
     [Serializable]
     public class VehicleProperties

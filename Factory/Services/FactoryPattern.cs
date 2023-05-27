@@ -1,19 +1,15 @@
-﻿using Factory.Logic.Entities;
-using Factory.Logic.Interfaces;
-using Factory.Logic.Utils.Vehicles;
+﻿using Factory.Services.Entities;
+using Factory.Services.Interfaces;
+using Factory.Services.Utils.Vehicles;
 
-namespace Factory.Logic
+namespace Factory.Services
 {
     /// <summary>
     /// The vehicle factory class.
     /// </summary>
-    public class Factory : IFactory
+    public class FactoryPattern : IFactoryPattern
     {
-        /// <summary>
-        /// IVehicle interface.
-        /// </summary>
-        private readonly IVehicle _vehicle;
-        
+
         /// <summary>
         /// ICellar interface
         /// </summary>
@@ -23,9 +19,8 @@ namespace Factory.Logic
         /// Constructor for Factory.
         /// </summary>
         /// <param name="vehicle">IVehicle interface.</param>
-        public Factory(IVehicle vehicle, IHangar cellar) 
+        public FactoryPattern(IHangar cellar) 
         {
-            _vehicle = vehicle;
             _hangar = cellar;
         }
 
@@ -35,7 +30,7 @@ namespace Factory.Logic
         /// <param name="type">Type of vehicle to be created.</param>
         /// <param name="brand">Brand of the vehicle.</param>
         /// <param name="name">Name for the vehicle.</param>
-        public void CreateNewVehicle(VehicleProperties vehicleProperties, int hangarId)
+        public void CreateNewVehicle(VehicleProperties vehicleProperties)
         {
             switch (vehicleProperties.Type)
             {

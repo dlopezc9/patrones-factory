@@ -1,8 +1,6 @@
-﻿using System.Runtime.CompilerServices;
+﻿using Factory.Services.Interfaces;
 
-using Factory.Logic.Interfaces;
-
-namespace Factory.Logic
+namespace Factory.Services
 {
     public abstract class Vehicle : IVehicle
     {

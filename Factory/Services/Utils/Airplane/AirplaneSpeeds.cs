@@ -1,4 +1,4 @@
-﻿namespace Factory.Logic.Utils.Airplane
+﻿namespace Factory.Services.Utils.Airplane
 {
     /// <summary>
     /// Const file containing speed for different airplanes.
