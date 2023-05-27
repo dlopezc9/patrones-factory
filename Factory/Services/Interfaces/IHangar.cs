@@ -31,6 +31,6 @@ namespace Factory.Services.Interfaces
         /// Method to get all the parked vehicles in the hangar.
         /// </summary>
         /// <returns>List with all the vehicles.</returns>
-        public List<Vehicle> GetVehicles();
+        public List<Vehicle> GetAllVehicles();
     }
 }

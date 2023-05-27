@@ -5,7 +5,7 @@ using Factory.Services.Utils.Vehicles;
 namespace Factory.Services
 {
     /// <summary>
-    /// Hangar class.
+    /// Hangar singleton class.
     /// </summary>
     public class Hangar : IHangar
     {
@@ -76,7 +76,7 @@ namespace Factory.Services
         /// Gets all the vehicles.
         /// </summary>
         /// <returns></returns>
-        public List<Vehicle> GetVehicles()
+        public List<Vehicle> GetAllVehicles()
         {
             return this.Vehicles;
         }
