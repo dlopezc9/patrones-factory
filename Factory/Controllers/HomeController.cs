@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Factory.Controllers
 {
     [ApiController]
-    [Route("[home]")]
-    public class HomeController : Controller
+    [Route("[controller]")]
+    public class HomeController : ControllerBase
     {
         private readonly IFactoryPattern factory;
 
@@ -20,16 +20,23 @@ namespace Factory.Controllers
             this.hangar = hangar;
         }
 
-        [HttpPost(Name = "AddVehicle")]
+        [HttpPost("AddVehicle")]
         public void AddNewVehicle(VehicleProperties vehicle)
         {
             factory.CreateNewVehicle(vehicle);
         }
 
-        [HttpGet(Name = "GetHangarVehicles")]
-        public void GetHangarVehicles(VehicleProperties vehicle)
+        [HttpGet("GetHangarVehicles")]
+        public IActionResult GetHangarVehicles()
         {
-            hangar.GetVehicle(vehicle);
+            var result = hangar.GetVehicles();
+
+            if (result != null)
+            {
+                return Ok(result);
+            }
+
+            return NotFound();
         }
     }
 }

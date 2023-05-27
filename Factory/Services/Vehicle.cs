@@ -2,7 +2,7 @@
 
 namespace Factory.Services
 {
-    public abstract class Vehicle : IVehicle
+    public abstract class Vehicle
     {
         /// <summary>
         /// Informal name of the airplane.

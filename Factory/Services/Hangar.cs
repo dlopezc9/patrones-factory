@@ -60,11 +60,11 @@ namespace Factory.Services
             switch (vehicleProperties.Type) 
             {
                 case VehicleTypes.Airplane:
-                    Vehicle airplane = this.Vehicles.Where(x => x.Name == vehicleProperties.Name && x.Brand == vehicleProperties.Brand).FirstOrDefault();
+                    Vehicle airplane = this.Vehicles.FirstOrDefault(x => x.Name == vehicleProperties.Name && x.Brand == vehicleProperties.Brand);
                     return airplane == null ? null : airplane;
 
                 case VehicleTypes.Truck:
-                    Vehicle truck = this.Vehicles.Where(x => x.Name == vehicleProperties.Name && x.Brand == vehicleProperties.Brand).FirstOrDefault();
+                    Vehicle truck = this.Vehicles.FirstOrDefault(x => x.Name == vehicleProperties.Name && x.Brand == vehicleProperties.Brand);
                     return truck == null ? null : truck;
 
                 default:
